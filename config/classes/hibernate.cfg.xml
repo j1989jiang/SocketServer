@@ -46,44 +46,6 @@
 	<property name="javax.persistence.validation.mode">none</property> 
 	
 	<mapping class = "com.yuechuankeji.bean.AccountAward"/>
-	<mapping class = "com.yuechuankeji.bean.FacebookGiftPack"/>
-	<mapping class = "com.yuechuankeji.bean.Guild"/>
-	<mapping class = "com.yuechuankeji.bean.GuildBattleActivity"/>
-	<mapping class = "com.yuechuankeji.bean.GuildBattleInfo"/>
-	<mapping class = "com.yuechuankeji.bean.GuildBattleSigleGuild"/>
-	<mapping class = "com.yuechuankeji.bean.GuildBattleUserInfo"/>
-	<mapping class = "com.yuechuankeji.bean.GuildMember"/>
-	<mapping class = "com.yuechuankeji.bean.GuildWar"/>
-	<mapping class = "com.yuechuankeji.bean.GuildWarBattle"/>
-	<mapping class = "com.yuechuankeji.bean.GuildWarJoin"/>
-	<mapping class = "com.yuechuankeji.bean.Invite"/>
-	<mapping class = "com.yuechuankeji.bean.LimitRetrunActivity"/>
-	<mapping class = "com.yuechuankeji.bean.Player"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerArena"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerArenaAcross"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerBrood"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerContestPvp"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerEdnless"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerFriend"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerFund"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerGuildSkill"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerHire"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerItem"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerLeadSkill"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerLevel"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerMail"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerPets"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerQuest"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerRankAchievement"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerRecharge"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerRechargeRecord"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerSkill"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerTattoo"/>
-	<mapping class = "com.yuechuankeji.bean.PlayerWing"/>
-	<mapping class = "com.yuechuankeji.bean.Rank"/>
-	<mapping class = "com.yuechuankeji.bean.RankList"/>
-	<mapping class = "com.yuechuankeji.bean.Server"/>
-	<mapping class = "com.yuechuankeji.bean.WorldBoss"/>
 	
 </session-factory>
 
