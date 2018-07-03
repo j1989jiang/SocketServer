@@ -1,0 +1,7 @@
+package com.yuechuankeji.protocol;
+
+option java_outer_classname = "TestProtos";
+message Test{
+	required string msg = 1;
+}
+

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<session-factory>
+
+	<!-- Database connection settings -->
+	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+	<!-- 配置移动至hibernate.properties，避免每次配置服务器时需要编辑xml文件
+	<property name="connection.url">jdbc:mysql://10.182.53.83/qxmobile</property>
+	<property name="connection.username">devuser</property>
+	<property name="connection.password">devuser</property>
+	-->
+	<property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
+	<property name="hibernate.c3p0.testWhileIdle">true</property>
+	<property name="hibernate.c3p0.testOnBorrow">false</property>
+	<property name="hibernate.c3p0.validationQuery">select 1</property>   
+    <property name="hibernate.c3p0.min_size">3</property>
+	<property name="hibernate.c3p0.max_size">100</property>
+    <property name="hibernate.c3p0.timeout">2000</property>     
+
+	<!-- JDBC connection pool (use the built-in) -->
+	<property name="connection.pool_size">3</property>
+
+	<!-- SQL dialect -->
+	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+	<!-- Enable Hibernate's automatic session context management -->
+	<property name="current_session_context_class">thread</property>
+
+	<!-- Disable the second-level cache  -->
+	<property name="cache.provider_class">
+		org.hibernate.cache.internal.NoCacheProvider
+	</property>
+
+	<!-- Echo all executed SQL to stdout -->
+	<property name="show_sql">false</property>
+
+	<!-- Drop and re-create the database schema on startup -->
+	<property name="hbm2ddl.auto">update</property>			
+	<property name="myeclipse.connection.profile">mysql</property>
+	<property name="javax.persistence.validation.mode">none</property> 
+	
+	<mapping class = "com.yuechuankeji.bean.AccountAward"/>
+	<mapping class = "com.yuechuankeji.bean.FacebookGiftPack"/>
+	<mapping class = "com.yuechuankeji.bean.Guild"/>
+	<mapping class = "com.yuechuankeji.bean.GuildBattleActivity"/>
+	<mapping class = "com.yuechuankeji.bean.GuildBattleInfo"/>
+	<mapping class = "com.yuechuankeji.bean.GuildBattleSigleGuild"/>
+	<mapping class = "com.yuechuankeji.bean.GuildBattleUserInfo"/>
+	<mapping class = "com.yuechuankeji.bean.GuildMember"/>
+	<mapping class = "com.yuechuankeji.bean.GuildWar"/>
+	<mapping class = "com.yuechuankeji.bean.GuildWarBattle"/>
+	<mapping class = "com.yuechuankeji.bean.GuildWarJoin"/>
+	<mapping class = "com.yuechuankeji.bean.Invite"/>
+	<mapping class = "com.yuechuankeji.bean.LimitRetrunActivity"/>
+	<mapping class = "com.yuechuankeji.bean.Player"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerArena"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerArenaAcross"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerBrood"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerContestPvp"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerEdnless"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerFriend"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerFund"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerGuildSkill"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerHire"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerItem"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerLeadSkill"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerLevel"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerMail"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerPets"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerQuest"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerRankAchievement"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerRecharge"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerRechargeRecord"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerSkill"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerTattoo"/>
+	<mapping class = "com.yuechuankeji.bean.PlayerWing"/>
+	<mapping class = "com.yuechuankeji.bean.Rank"/>
+	<mapping class = "com.yuechuankeji.bean.RankList"/>
+	<mapping class = "com.yuechuankeji.bean.Server"/>
+	<mapping class = "com.yuechuankeji.bean.WorldBoss"/>
+	
+</session-factory>
+
+</hibernate-configuration>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+	<!-- logback可以通过外部properties文件来获取变量配置 -->
+	<property resource="logback.properties" />
+	
+	<!--通过控制台输出的配置  -->
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+	    <encoder>
+	      <pattern>%d{MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+	    </encoder>
+    </appender>
+    
+    <!--通过文件输出的配置 -->
+    <appender name="fileout" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<File>${GAME_LOG_PATH}/gameServer.log</File>
+    	<encoder>
+    		<pattern>%d{MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    	</encoder>
+    	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+    		<fileNamePattern>${GAME_LOG_PATH}/gameServer.%d{yyyy-MM-dd}.log</fileNamePattern>
+    	</rollingPolicy>
+    </appender>
+    
+    <!--配置日志默认输出方式：控制台和文件同时输出 -->
+    <root level="INFO">
+	    <appender-ref ref="stdout"/>
+	    <appender-ref ref="fileout"/>
+    </root>
+    
+    <!--经过单独配置的类的日志输出不再收到默认输出方式的影响 -->
+    <!--单独配置mina框架的线程池日志输出至控制台 -->
+    <logger name="org.apache.mina.filter.executor.OrderedThreadPoolExecutor" level="INFO">
+    	<appender-ref ref="stdout"/>
+    </logger>
+    
+</configuration>
